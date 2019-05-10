@@ -1,8 +1,6 @@
 FROM qcidocker/qci_base:latest
 ARG NODE_VERSION=10.15.3
-ARG NODE_ENV=production
 ENV NODE_VERSION=${NODE_VERSION}
-ENV NODE_ENV=${NODE_ENV}
 ENV NODE_HOME /usr/local/nodejs
 ENV NODE_PATH $NODE_HOME/lib/node_modules
 RUN mkdir -p $NODE_HOME
