@@ -1,1 +1,1 @@
-docker run -d ijiajia/sim-node
+docker run -it ijiajia/sim-node bash
