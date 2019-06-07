@@ -1,10 +1,7 @@
 FROM qcidocker/qci_base:latest
 RUN rpm --rebuilddb; yum -y install python-pip
 RUN pip install qcicli -i http://pypi.dq.oa.com/simple/ --trusted-host=pypi.dq.oa.com
-WORKDIR /usr/lib64
-COPY libstdc++.so.6.0.22 .
-RUN rm -f libstdc++.so.6 && ln -s libstdc++.so.6.0.22 libstdc++.so.6
-ARG NODE_VERSION=12.0.0
+ARG NODE_VERSION=10.16.0
 ENV NODE_VERSION=${NODE_VERSION}
 ENV NODE_HOME /usr/local/nodejs
 ENV NODE_PATH $NODE_HOME/lib/node_modules
